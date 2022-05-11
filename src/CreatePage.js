@@ -7,14 +7,14 @@ export default function CreatePage() {
   const history = useHistory();
 
   // here's the state you'll need:
-  const [gameInForm, setGameInForm] = {
+  const [gameInForm, setGameInForm] = useState({
     title: '',
     genre: '',
     designer: '',
     description: '',
-    minPlayers: 0,
-    maxPlayers: 0,
-  };
+    min_players: 0,
+    max_players: 0,
+  });
 
   async function handleSubmit(e) {
     e.preventDefault();
