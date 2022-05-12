@@ -36,20 +36,17 @@ export default function App() {
     <Router>
       <div className="App">
         <header>
-          {
-            <nav>
-              user ?
-              <ul>
-                <li>
-                  <NavLink to="/board-games">Board Games List</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/create">Create</NavLink>
-                </li>
-              </ul>
-              <button onClick={handleLogout}>Log Out</button>: null
-            </nav>
-          }
+          {token && (
+            <>
+              <NavLink exact className="active-link" to="/board-games">
+                Board Game List
+              </NavLink>
+              <NavLink exact className="active-link" to="/create">
+                Create A Game
+              </NavLink>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          )}
           {/* if there is a user in state, render out a link to the board games list, the create page, and add a button to let the user logout */}
         </header>
         <main>
