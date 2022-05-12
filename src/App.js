@@ -48,7 +48,6 @@ export default function App() {
             </>
           )}
           <p>{email}</p>
-          <p>{token}</p>
           {/* if there is a user in state, render out a link to the board games list, the create page, and add a button to let the user logout */}
         </header>
         <main>
